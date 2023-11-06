@@ -1,0 +1,23 @@
+@use "../global/variables" as v;
+@use "../global/mixin" as m;
+
+.about__learnings {
+  padding: 20px;
+  width: calc(50% - 50px);
+  border-radius: 16px;
+  background-color: v.$white;
+  box-shadow: v.$box-shadow;
+
+  @include m.mq(tb) {
+    padding: 10px;
+    width: calc(50% - 28px);
+  }
+
+  &__title {
+    @include m.mq(sp) {
+      font-size: 0.9rem;
+      line-height: normal;
+      letter-spacing: normal;
+    }
+  }
+}
